@@ -22,7 +22,7 @@ public abstract class State : ScriptableObject
     {
         CheckForValidTransitions();
 
-        Debug.Log("Update state -> " + name);
+        // Debug.Log("Update state -> " + name);
     }
 
     public virtual void Exit()

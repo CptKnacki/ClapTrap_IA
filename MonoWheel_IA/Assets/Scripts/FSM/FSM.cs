@@ -6,9 +6,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FSM", menuName = "FSM/Create FSM")]
 public class FSM : ScriptableObject
 {
+    [field: SerializeField] public State StartingState { get; set; }
     public FSMComponent FSMOwner { get; set; }
-    [field:SerializeField] public State StartingState { get; set; }
     public State CurrentState { get; set; }
+
+
 
 
     public void StartSFM(FSMComponent _fsm)

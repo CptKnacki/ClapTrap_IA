@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e7698a85c568e4bb2156dff8efbbb8, type: 3}
-  m_Name: WaitForTransition
+  m_Script: {fileID: 11500000, guid: 740b16c400a67e14bb15a5a4a28638be, type: 3}
+  m_Name: NoTimeTransition
   m_EditorClassIdentifier: 
-  nextState: {fileID: 11400000, guid: f79a7fc9df4d3ba47a4eb378bb5dc63c, type: 2}
-  waitTime: 3
+  nextState: {fileID: 11400000, guid: b5db6b3225a543144bb1b7159bf95166, type: 2}

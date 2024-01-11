@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e7698a85c568e4bb2156dff8efbbb8, type: 3}
-  m_Name: WaitForTransition
+  m_Script: {fileID: 11500000, guid: 9eb152baf99e9ca45adb8a97dc91fb65, type: 3}
+  m_Name: GetNavPointState_Corr
   m_EditorClassIdentifier: 
-  nextState: {fileID: 11400000, guid: f79a7fc9df4d3ba47a4eb378bb5dc63c, type: 2}
-  waitTime: 3
+  transitions:
+  - {fileID: 11400000, guid: abc08ebeeb2328145917325a7bf869ef, type: 2}

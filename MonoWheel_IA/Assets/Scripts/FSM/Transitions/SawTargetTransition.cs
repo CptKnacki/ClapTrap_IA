@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SawTargetTransition", menuName = "FSM/Create SawTarget Transition")]
 public class SawTargetTransition : Transition
 {
-    public override bool IsTransitionValid => owner.FSMOwner.trashDetectComponent.CurrentTrash;
+    //public override bool IsTransitionValid => owner.FSMOwner.TrashDetectComponent.CurrentTrash;
 
 
 }

@@ -6,42 +6,38 @@ using UnityEngine.UIElements;
 public class MoveComponent : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5.0f;
+    [SerializeField] float range = 5.0f;
     public Vector3 Destination { get; set; }
-    public bool CanMove => Vector3.Distance(transform.position, Destination) > 0.1f;
-
-
-    void Start()
-    {
-
-    }
+    public bool IsAtDestination => Vector3.Distance(transform.position, Destination) < range;
+    public float MoveSpeed => moveSpeed;    
 
     void Update()
     {
         Move();
-        RotateTo();
+        RotateTo(Destination);
     }
 
     private void Move()
     {
-        if (CanMove)
-        {
-            // RAJOUTER UN LOOK AT DE LA DESTINATION //
+        if (IsAtDestination)
+            return;
 
-            transform.position = Vector3.MoveTowards(transform.position, Destination, Time.deltaTime * moveSpeed);
-            
-        }
+        transform.position = Vector3.MoveTowards(transform.position, Destination, Time.deltaTime * moveSpeed);
     }
 
-    void RotateTo()
+    public void RotateTo(Vector3 _targetPosition)
     {
-        if (CanMove)
-        {
-            Vector3 _direction = Destination - transform.position;
-            float _yaw = Vector3.Dot(_direction.normalized, transform.right);
-            transform.eulerAngles += new Vector3(0, _yaw, 0);
-        }
+        Vector3 _direction = _targetPosition - transform.position;
+        float _yaw = Vector3.Dot(_direction.normalized, transform.right);
+        transform.eulerAngles += new Vector3(0, _yaw, 0);
+        
     }
 
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, Destination);
+        Gizmos.DrawWireSphere(Destination, range);
+    }
 
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class DestinationReachedTransition : Transition
 {
 
-    public override bool IsTransitionValid => !owner.FSMOwner.moveComponent.CanMove;
+    //public override bool IsTransitionValid => !owner.FSMOwner.MoveComponent.CanMove;
 
     
 }

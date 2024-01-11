@@ -11,6 +11,9 @@ public class GoToTargetState : State
     {
         base.Enter(_fsm);
 
-        owner.FSMOwner.moveComponent.Destination = owner.FSMOwner.trashDetectComponent.CurrentTrash.transform.position;
+        //Vector3 _destination = owner.FSMOwner.TrashDetectComponent.CurrentTrashPosition;
+        //_destination.y = owner.FSMOwner.transform.position.y;
+        //
+        //owner.FSMOwner.MoveComponent.Destination = _destination;
     }
 }

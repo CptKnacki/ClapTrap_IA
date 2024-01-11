@@ -7,7 +7,6 @@ using UnityEngine;
 public class SearchState : State
 {
 
-
     public override void Enter(FSM _fsm)
     {
         base.Enter(_fsm);
@@ -17,16 +16,9 @@ public class SearchState : State
 
         Vector3 _position = new Vector3(_x, 0, _z);
 
-        //Debug.Log
-        _fsm.FSMOwner.moveComponent.Destination = _position;
+        //_fsm.FSMOwner.MoveComponent.Destination = _position;
 
-
-    }
-
-    public override void Update()
-    {
-        base.Update();
-
+        //owner.FSMOwner.MonoWheelAnim.IsMoving = true;
     }
 
 }

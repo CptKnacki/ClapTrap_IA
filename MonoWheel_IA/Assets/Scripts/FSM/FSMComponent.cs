@@ -1,30 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.UI.GridLayoutGroup;
 
 public class FSMComponent : MonoBehaviour
 {
     [field: SerializeField] FSM fsmToCreate = null;
 
-    [SerializeField] public MoveComponent moveComponent = null;
-    [SerializeField] public TrashInteractionComponent trashDetectComponent = null;
+    [SerializeField] MoveComponent moveComponent = null;
+    //[SerializeField] TrashInteractionComponent trashDetectComponent = null;
+    //[SerializeField] MonowheelAnimation monoWheelAnim = null;
+
+    [SerializeField] GroundScript ground = null;
+    public GroundScript Ground => ground;
+
+    public MoveComponent MoveComponent => moveComponent;
+   // public TrashInteractionComponent TrashDetectComponent => trashDetectComponent;
+   // public MonowheelAnimation MonoWheelAnim => monoWheelAnim;
+
+
 
     FSM currentFSM = null;
-
+    
     private void Start()
     {
         Init();
-    }
-
-    void Init()
-    {
-        if (!fsmToCreate)
-            return;
-
-        currentFSM = Instantiate(fsmToCreate);
-        currentFSM.StartSFM(this);
-
     }
 
     private void Update()
@@ -39,13 +38,15 @@ public class FSMComponent : MonoBehaviour
             currentFSM.StopFSM();
     }
 
-    void OnDrawGizmos()
+
+    void Init()
     {
-        Gizmos.color = Color.red;
+        if (!fsmToCreate)
+            return;
 
-        Gizmos.DrawLine(moveComponent.Destination, gameObject.transform.position);
-        Gizmos.DrawWireCube(moveComponent.Destination, new Vector3(0.5f, 0.5f, 0.5f));
+        currentFSM = Instantiate(fsmToCreate);
+        currentFSM.StartSFM(this);
+
     }
-
 
 }

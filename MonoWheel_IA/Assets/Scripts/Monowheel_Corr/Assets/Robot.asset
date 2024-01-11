@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e7698a85c568e4bb2156dff8efbbb8, type: 3}
-  m_Name: WaitForTransition
+  m_Script: {fileID: 11500000, guid: c4e3e9f116b50a04388dea4ecf9defc3, type: 3}
+  m_Name: Robot
   m_EditorClassIdentifier: 
-  nextState: {fileID: 11400000, guid: f79a7fc9df4d3ba47a4eb378bb5dc63c, type: 2}
-  waitTime: 3
+  <StartingState>k__BackingField: {fileID: 11400000, guid: f79a7fc9df4d3ba47a4eb378bb5dc63c, type: 2}
