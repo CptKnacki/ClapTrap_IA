@@ -9,8 +9,8 @@ public class GroundScript : MonoBehaviour
     public Vector3 GetRandomPoint()
     {
 
-        float _sizeX = transform.localScale.x * 10,
-              _sizeZ = transform.localScale.z * 10;
+        float _sizeX = (transform.localScale.x -1) * 10,
+              _sizeZ = (transform.localScale.z -1) * 10;
 
         float _x = Random.Range(-_sizeX * 0.5f, _sizeX * 0.5f),
               _z = Random.Range(-_sizeZ * 0.5f, _sizeZ * 0.5f);
@@ -20,7 +20,7 @@ public class GroundScript : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawSphere(point, 0.3f);
+        //Gizmos.color = Color.red;
+        //Gizmos.DrawSphere(point, 0.3f);
     }
 }

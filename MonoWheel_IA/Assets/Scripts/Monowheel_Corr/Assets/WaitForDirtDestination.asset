@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb152baf99e9ca45adb8a97dc91fb65, type: 3}
-  m_Name: GetNavPointState_Corr
+  m_Script: {fileID: 11500000, guid: d4d86d19a39377f42b7b384c10a02dcd, type: 3}
+  m_Name: WaitForDirtDestination
   m_EditorClassIdentifier: 
-  transitions:
-  - {fileID: 11400000, guid: abc08ebeeb2328145917325a7bf869ef, type: 2}
-  - {fileID: 11400000, guid: d28bb84db5b99b34b9a10c7964473661, type: 2}
+  nextState: {fileID: 11400000, guid: 6939cf37b6442094c93bc9de4e52eec5, type: 2}

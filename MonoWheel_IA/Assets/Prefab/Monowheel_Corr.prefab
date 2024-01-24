@@ -732,6 +732,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7888508485804603391}
+  - component: {fileID: 41776218421026917}
+  - component: {fileID: 2750618244598085502}
+  - component: {fileID: 5288937405894221648}
   m_Layer: 0
   m_Name: Monowheel_Corr
   m_TagString: Untagged
@@ -756,6 +759,54 @@ Transform:
   - {fileID: 8547791668405483940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &41776218421026917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4167931245038044399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63515a3365b6b3347b3c00c8fc1e11c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsmToCreate: {fileID: 11400000, guid: 9aa38e5bd568cd44c9edcb3898e9cfd6, type: 2}
+  moveComponent: {fileID: 2750618244598085502}
+  ground: {fileID: 0}
+--- !u!114 &2750618244598085502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4167931245038044399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7013882e32dcd414ca4d0f3719614a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  range: 4
+--- !u!114 &5288937405894221648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4167931245038044399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4dcddedb2fc1e240aa05dbfc7262664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sightAngle: 90
+  range: 8
+  definition: 5
+  sightHeight: 1.5
+  hitLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &4208539066506336676
 GameObject:
   m_ObjectHideFlags: 0

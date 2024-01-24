@@ -48,7 +48,7 @@ public abstract class State : ScriptableObject
     {
         for (int i = 0; i < runningTransitions.Count; i++)
         {
-            if (runningTransitions[i] && runningTransitions[i].IsTransitionValid)
+            if (runningTransitions[i] && runningTransitions[i].IsTransitionValid) // Prendre en compte le COST des transitions //
             {
                 Exit();
                 owner.SetNextState(runningTransitions[i].NextState);

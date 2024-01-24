@@ -12,5 +12,6 @@ public class FindNavPointRobotState_Corr : State
         base.Enter(_fsm);
 
         owner.FSMOwner.MoveComponent.Destination = owner.FSMOwner.Ground.GetRandomPoint();
+        owner.FSMOwner.MoveComponent.DetermineIndexes();
     }
 }

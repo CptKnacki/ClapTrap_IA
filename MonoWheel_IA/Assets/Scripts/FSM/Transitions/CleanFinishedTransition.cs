@@ -15,6 +15,7 @@ public class CleanFinishedTransition : Transition
     {
         base.InitTransition(_owner);
         owner.FSMOwner.StartCoroutine(Clean());
+        hasCleaned = false;
     }
 
     IEnumerator Clean()
